@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Mask.BackgroundService;
 
 namespace Mask
 {
@@ -25,6 +26,7 @@ namespace Mask
 
             services.AddControllersWithViews();
             services.AddSignalR();
+            services.AddHostedService<TimerTask>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EFCore_1", Version = "v1" });
