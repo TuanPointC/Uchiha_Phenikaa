@@ -1,0 +1,31 @@
+.footerLayout{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid gray;
+    align-items: center;
+    height: 60px;
+    color: white;
+    padding: 0 5rem;
+    .social-icons{
+        display: flex;
+        list-style: none;
+        margin: 0;
+        li{
+            width: 35px;
+            height: 35px;
+            background-color: gray;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                background-color: rgb(77, 77, 77);
+            }
+        }
+    }
+}

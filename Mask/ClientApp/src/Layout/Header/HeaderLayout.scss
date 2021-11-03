@@ -1,0 +1,18 @@
+.headerLayout{
+    display: flex;
+    .logo{
+        flex: 1;
+        color: white;
+        font-size: 2rem;
+    }
+    .userName{
+        margin-right: 20px;
+        color: white;
+    }
+    .function{
+        .login-button{
+            margin-right: 20px;
+        }
+    }
+    
+}
