@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Mask.BackgroundService;
+using Mask.ModelAI;
 
 namespace Mask
 {
@@ -37,6 +38,8 @@ namespace Mask
             {
                 configuration.RootPath = "ClientApp/build";
             });
+            services.AddSingleton<IClassificationMask, ClassificationMask>();
+            services.AddSingleton<IFaceDecection, FaceDetection>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

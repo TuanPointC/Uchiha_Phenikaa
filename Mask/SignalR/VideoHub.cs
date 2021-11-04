@@ -11,10 +11,6 @@ namespace Mask.SignalR
 {
     public class VideoHub : Hub
     {
-        private Mat frame = new Mat();
-
-        private CascadeClassifier haarcascade = new CascadeClassifier(Environment.CurrentDirectory + "\\SignalR\\haarcascade_frontalface_default.xml");
-
-       
+      
     }
 }
