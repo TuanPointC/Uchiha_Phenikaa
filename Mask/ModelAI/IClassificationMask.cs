@@ -8,6 +8,6 @@ namespace Mask.ModelAI
 {
     public interface IClassificationMask
     {
-        public bool Run(Image<Emgu.CV.Structure.Bgr, byte> image);
+        public Task<bool> Run(Image<Emgu.CV.Structure.Bgr, byte> image);
     }
 }

@@ -36,7 +36,6 @@ namespace Mask.BackgroundService
 
             _timer = new Timer(async (o) =>
             {
-
                 capture.Read(frame);
                 if (!frame.IsEmpty)
                 {

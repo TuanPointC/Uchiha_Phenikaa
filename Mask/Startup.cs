@@ -9,6 +9,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Mask.BackgroundService;
 using Mask.ModelAI;
+using Mask.DataModel;
+
 
 namespace Mask
 {
@@ -38,7 +40,7 @@ namespace Mask
             {
                 configuration.RootPath = "ClientApp/build";
             });
-            services.AddSingleton<IClassificationMask, ClassificationMask>();
+            
             services.AddSingleton<IFaceDecection, FaceDetection>();
         }
 
