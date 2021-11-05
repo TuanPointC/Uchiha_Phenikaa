@@ -1,11 +1,18 @@
 ﻿using Microsoft.ML.Data;
+using Microsoft.ML.Transforms.Image;
+using System.Drawing;
 
 namespace Mask.DataModel
 {
+    public class ImageSetting
+    {
+        public const int imageHeight = 224;
+        public const int imageWidth = 224;
+    }
     public class ImageInputData
     {
-        [VectorType(224 * 224 * 3)]
+        [ImageType(ImageSetting.imageHeight,ImageSetting.imageWidth)]
         [ColumnName("sequential_1_input")]
-        public byte[] Data { get; set; }
+        public Bitmap Image { get; set; }
     }
 }

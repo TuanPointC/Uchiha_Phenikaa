@@ -38,12 +38,12 @@ namespace Mask.BackgroundService
             {
                 capture.Read(frame);
                 if (!frame.IsEmpty)
-                {
+                { 
                     await _faceDetection.SendFrame(frame);
                 }
                 else
                 {
-                    capture.Read(frame);
+                    capture = new VideoCapture(0);
                     Console.WriteLine("empty");
                 }
 
